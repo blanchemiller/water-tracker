@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hydration Pro | Clinical Nutrition</title>
+    <title>Hydration Pro | Weekly Clinical Follow-up</title>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0284c7">
     <!-- Google Fonts & FontAwesome -->
@@ -20,7 +20,7 @@
             --text-main: #0f172a;
             --text-muted: #64748b;
             --success: #10b981;
-            --shadow: 0 20px 40px rgba(2, 132, 199, 0.08);
+            --shadow: 0 25px 50px rgba(2, 132, 199, 0.1);
         }
 
         * {
@@ -37,16 +37,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 15px;
+            padding: 20px;
         }
 
         .app-container {
             width: 100%;
             max-width: 420px;
             background: var(--card-bg);
-            border-radius: 35px;
+            border-radius: 36px;
             box-shadow: var(--shadow);
-            padding: 25px 20px;
+            padding: 28px 24px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -57,35 +57,26 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 18px;
-            padding: 0 5px;
+            margin-bottom: 16px;
+            padding: 0 4px;
         }
 
         .brand-info {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             text-align: left;
         }
 
-        .logo-wrapper {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 2px solid var(--accent);
-            box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
-            background: #f8fafc;
-        }
-
-        .logo-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .brand-logo-img {
+            width: 58px;
+            height: 58px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(2, 132, 199, 0.15));
         }
 
         .brand-title {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 700;
             color: var(--text-main);
             line-height: 1.2;
@@ -100,8 +91,8 @@
         .settings-icon-btn {
             background: #f0f9ff;
             border: none;
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             color: var(--primary);
             cursor: pointer;
@@ -117,64 +108,120 @@
             color: white;
         }
 
-        /* Hero Banner with Custom SVG Water Glass Animation */
-        .hero-banner {
-            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
-            border-radius: 20px;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 18px;
+        /* 4 Daily Checkpoints Box */
+        .daily-checkpoints-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 12px 14px;
+            margin-bottom: 14px;
         }
 
-        .hero-text {
-            text-align: left;
-            max-width: 65%;
-        }
-
-        .hero-text h3 {
-            font-size: 15px;
-            color: var(--primary-dark);
+        .checkpoints-title {
+            font-size: 10px;
             font-weight: 700;
-            margin-bottom: 3px;
-        }
-
-        .hero-text p {
-            font-size: 11px;
             color: var(--text-muted);
-            line-height: 1.3;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .water-graphic {
-            width: 55px;
-            height: 55px;
-            background: white;
+        .checkpoints-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+        }
+
+        .checkpoint-btn {
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 8px 4px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .checkpoint-btn span {
+            font-size: 9px;
+            color: var(--text-muted);
+            display: block;
+            font-weight: 600;
+        }
+
+        .checkpoint-btn strong {
+            font-size: 11px;
+            color: var(--text-main);
+        }
+
+        .checkpoint-btn.completed {
+            background: #ecfdf5;
+            border-color: var(--success);
+        }
+
+        .checkpoint-btn.completed span, .checkpoint-btn.completed strong {
+            color: var(--success);
+        }
+
+        /* 7-Day Flexible Check-in Circles */
+        .weekly-tracker-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 14px;
+            margin-bottom: 16px;
+        }
+
+        .weekly-tracker-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .circles-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 6px;
+        }
+
+        .check-circle {
+            width: 38px;
+            height: 38px;
+            background: #ffffff;
+            border: 2px solid #cbd5e1;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 16px rgba(2, 132, 199, 0.15);
-            animation: pulse-glow 2s infinite ease-in-out;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: 0.2s ease;
         }
 
-        .water-graphic i {
-            font-size: 26px;
-            color: var(--primary);
+        .check-circle.completed {
+            background: #ecfdf5;
+            border-color: var(--success);
+            color: var(--success);
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+            transform: scale(1.05);
         }
 
-        @keyframes pulse-glow {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.3); }
-            50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(2, 132, 199, 0); }
-        }
-
-        /* Settings Panel (Flexible Controls) */
+        /* Settings Panel */
         .settings-panel {
             background: #f8fafc;
             border: 2px solid var(--accent);
             border-radius: 18px;
-            padding: 15px;
-            margin-bottom: 18px;
+            padding: 16px;
+            margin-bottom: 16px;
             text-align: left;
             display: none;
         }
@@ -192,10 +239,7 @@
         .settings-panel h4 {
             font-size: 13px;
             color: var(--primary-dark);
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            margin-bottom: 8px;
         }
 
         .setting-group {
@@ -207,16 +251,14 @@
             color: var(--text-muted);
             display: block;
             margin-bottom: 3px;
-            font-weight: 500;
         }
 
-        .setting-group select, .setting-group input {
+        .setting-group input {
             width: 100%;
-            padding: 8px 10px;
+            padding: 9px 12px;
             border-radius: 10px;
             border: 1px solid #cbd5e1;
             font-size: 12px;
-            background: white;
             outline: none;
         }
 
@@ -225,35 +267,46 @@
             color: white;
             border: none;
             width: 100%;
-            padding: 8px;
+            padding: 9px;
             border-radius: 10px;
             font-size: 12px;
             font-weight: 600;
             cursor: pointer;
-            margin-top: 5px;
         }
 
         /* Main Progress Card */
         .progress-card {
             background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-            border-radius: 22px;
-            padding: 18px;
+            border-radius: 24px;
+            padding: 20px;
             color: white;
-            margin-bottom: 18px;
-            box-shadow: 0 10px 20px rgba(2, 132, 199, 0.25);
+            margin-bottom: 16px;
+            box-shadow: 0 12px 25px rgba(2, 132, 199, 0.25);
+            transition: transform 0.3s ease;
+        }
+
+        .celebration-glow {
+            animation: celebratePulse 0.8s infinite alternate;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.45) !important;
+        }
+
+        @keyframes celebratePulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.02); }
         }
 
         .stats-grid {
             display: flex;
             justify-content: space-around;
             margin-bottom: 10px;
-            border-bottom: 1px solid rgba(255,255,255,0.15);
+            border-bottom: 1px solid rgba(255,255,255,0.18);
             padding-bottom: 8px;
         }
 
         .stat-item h4 {
-            font-size: 10px;
-            opacity: 0.8;
+            font-size: 11px;
+            opacity: 0.85;
             font-weight: 400;
         }
 
@@ -263,7 +316,7 @@
         }
 
         .main-progress-text {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 800;
             margin: 4px 0;
         }
@@ -285,35 +338,9 @@
             transition: width 0.4s ease;
         }
 
-        /* Extra Advanced Stats Strip (إحصائيات إضافية شيك جداً) */
-        .extra-stats {
-            display: flex;
-            justify-content: space-between;
-            background: #f8fafc;
-            border-radius: 14px;
-            padding: 10px 15px;
-            margin-bottom: 15px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .extra-stat-item {
-            text-align: center;
-        }
-
-        .extra-stat-item span {
-            font-size: 10px;
-            color: var(--text-muted);
-            display: block;
-        }
-
-        .extra-stat-item strong {
-            font-size: 13px;
-            color: var(--primary-dark);
-        }
-
-        /* Quick Add Water Buttons & Custom Input */
+        /* Quick Add Water Buttons */
         .section-label {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             color: var(--text-muted);
             text-align: left;
@@ -322,24 +349,25 @@
 
         .cups-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 14px;
         }
 
         .cup-btn {
             background: #f8fafc;
             border: 2px solid #e2e8f0;
             border-radius: 12px;
-            padding: 10px;
+            padding: 10px 0;
             font-size: 12px;
             font-weight: 600;
             color: var(--text-main);
             cursor: pointer;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 3px;
             transition: 0.2s;
         }
 
@@ -353,16 +381,20 @@
             background: #f0f9ff;
         }
 
-        /* Custom Input Row (للمرونة المطلقة) */
+        .cup-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Custom Add Row */
         .custom-add-row {
             display: flex;
             gap: 8px;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .custom-add-row input {
             flex: 1;
-            padding: 8px 10px;
+            padding: 9px 12px;
             border-radius: 12px;
             border: 2px solid #e2e8f0;
             font-size: 13px;
@@ -379,11 +411,34 @@
             background: var(--primary);
             color: white;
             border: none;
-            padding: 0 15px;
+            padding: 0 16px;
             border-radius: 12px;
             font-weight: 600;
             font-size: 12px;
             cursor: pointer;
+        }
+
+        /* Share Weekly Report Button */
+        .btn-share {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            width: 100%;
+            padding: 11px;
+            border-radius: 12px;
+            border: none;
+            font-weight: 600;
+            font-size: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            margin-bottom: 10px;
+        }
+
+        .btn-share:active {
+            transform: scale(0.97);
         }
 
         /* Reset Button */
@@ -391,24 +446,19 @@
             background: #fee2e2;
             color: #dc2626;
             width: 100%;
-            padding: 10px;
+            padding: 9px;
             border-radius: 12px;
             border: none;
             font-weight: 600;
-            font-size: 12px;
+            font-size: 11px;
             cursor: pointer;
-            transition: 0.2s;
             margin-bottom: 12px;
         }
 
-        .btn-reset:hover {
-            background: #fecaca;
-        }
-
-        /* Smart Tip Box */
+        /* Smart Positive Tip Box */
         .tip-box {
             background: #f8fafc;
-            border-left: 4px solid var(--accent);
+            border-left: 3px solid var(--accent);
             padding: 10px 12px;
             border-radius: 10px;
             text-align: left;
@@ -421,7 +471,7 @@
 
         .tip-box i {
             color: var(--primary);
-            font-size: 14px;
+            font-size: 13px;
             margin-top: 1px;
         }
     </style>
@@ -429,15 +479,13 @@
 <body>
 
     <div class="app-container">
-        <!-- Brand Header -->
+        <!-- Brand Header with Clean & Clear Logo -->
         <div class="brand-header">
             <div class="brand-info">
-                <div class="logo-wrapper">
-                    <img src="YOUR_LOGO_URL_HERE.png" alt="Logo" id="brandLogo">
-                </div>
+                <img src="YOUR_LOGO_URL_HERE.png" alt="Logo" class="brand-logo-img" id="brandLogo">
                 <div>
                     <div class="brand-title">Hydration Pro</div>
-                    <div class="brand-subtitle">Clinical Nutrition Care</div>
+                    <div class="brand-subtitle">Weekly Clinical Follow-up</div>
                 </div>
             </div>
             <button class="settings-icon-btn" onclick="toggleSettings()" title="Settings & Goals">
@@ -445,37 +493,40 @@
             </button>
         </div>
 
-        <!-- Hero Banner with Vector Water Icon (بدون صور خارجية معطلة) -->
-        <div class="hero-banner">
-            <div class="hero-text">
-                <h3>Stay Hydrated!</h3>
-                <p>Smart daily tracking designed for your maximum performance.</p>
+        <!-- 4 Daily Checkpoints (Encourages checking in 3-4 times a day) -->
+        <div class="daily-checkpoints-box">
+            <div class="checkpoints-title">
+                <span>Daily Check-in Sprints (4 Times)</span>
+                <span id="dailyCheckScore" style="color: var(--primary);">0/4 Done</span>
             </div>
-            <div class="water-graphic">
-                <i class="fa-solid fa-droplet"></i>
+            <div class="checkpoints-grid" id="dailyCheckGrid">
+                <!-- Generated dynamically via JS -->
             </div>
         </div>
 
-        <!-- Settings Panel (المرونة الكاملة: تعديل الهدف + التنبيهات) -->
+        <!-- 7-Day Flexible Check-in Circles -->
+        <div class="weekly-tracker-box">
+            <div class="weekly-tracker-title">
+                <span>Clinical Week Progress</span>
+                <span id="weeklyScoreText" style="color: var(--primary);">0/7 Days</span>
+            </div>
+            <div class="circles-grid" id="circlesGridContainer">
+                <!-- Generated dynamically via JS -->
+            </div>
+        </div>
+
+        <!-- Settings Panel -->
         <div class="settings-panel" id="settingsPanel">
-            <h4><i class="fa-solid fa-sliders"></i> Customization & Alerts</h4>
+            <h4>Goal Customization</h4>
             <div class="setting-group">
                 <label>Daily Goal (ml)</label>
                 <input type="number" id="customGoalInput" value="2500" step="100">
             </div>
-            <div class="setting-group">
-                <label>Reminder Frequency</label>
-                <select id="intervalSelect">
-                    <option value="3600000">Every 1 Hour</option>
-                    <option value="7200000" selected>Every 2 Hours</option>
-                    <option value="10800000">Every 3 Hours</option>
-                </select>
-            </div>
-            <button class="save-settings-btn" onclick="saveSettings()">Save Changes & Enable Alerts</button>
+            <button class="save-settings-btn" onclick="saveSettings()">Save Changes</button>
         </div>
 
         <!-- Main Progress Card -->
-        <div class="progress-card">
+        <div class="progress-card" id="progressCardElement">
             <div class="stats-grid">
                 <div class="stat-item">
                     <h4>Goal</h4>
@@ -492,7 +543,7 @@
             </div>
 
             <div class="main-progress-text">
-                <span id="current-water">0</span> <span style="font-size: 13px; font-weight: 400;">ml</span>
+                <span id="current-water">0</span> <span style="font-size: 12px; font-weight: 400;">ml</span>
             </div>
 
             <div class="progress-bar-bg">
@@ -500,47 +551,36 @@
             </div>
         </div>
 
-        <!-- Extra Advanced Stats Strip (إحصائيات إضافية ذكية) -->
-        <div class="extra-stats">
-            <div class="extra-stat-item">
-                <span>Total Sips</span>
-                <strong id="totalSipsCount">0</strong>
-            </div>
-            <div class="extra-stat-item">
-                <span>Avg Sip Size</span>
-                <strong id="avgSipSize">0 ml</strong>
-            </div>
-            <div class="extra-stat-item">
-                <span>Status</span>
-                <strong id="hydrationStatus" style="color: var(--primary);">Need Water</strong>
-            </div>
-        </div>
-
         <!-- Quick Add Section -->
         <div class="section-label">Quick Add Drinks</div>
         <div class="cups-grid">
-            <button class="cup-btn" onclick="addWater(200)"><i class="fa-solid fa-glass-water"></i> +200 ml</button>
-            <button class="cup-btn" onclick="addWater(330)"><i class="fa-solid fa-bottle-water"></i> +330 ml</button>
-            <button class="cup-btn" onclick="addWater(500)"><i class="fa-solid fa-flask"></i> +500 ml</button>
-            <button class="cup-btn" onclick="addWater(750)"><i class="fa-solid fa-jug-detergent"></i> +750 ml</button>
+            <button class="cup-btn" onclick="addWater(150)"><i class="fa-solid fa-glass-water"></i> +150</button>
+            <button class="cup-btn" onclick="addWater(250)"><i class="fa-solid fa-bottle-water"></i> +250</button>
+            <button class="cup-btn" onclick="addWater(350)"><i class="fa-solid fa-flask"></i> +350</button>
+            <button class="cup-btn" onclick="addWater(500)"><i class="fa-solid fa-jug-detergent"></i> +500</button>
         </div>
 
-        <!-- Custom Add Row (مرونة تامة لكتابة أي كمية) -->
+        <!-- Custom Add Row -->
         <div class="custom-add-row">
-            <input type="number" id="customAmountInput" placeholder="Custom ml (e.g. 150)" min="10" max="2000">
+            <input type="number" id="customAmountInput" placeholder="Custom ml (e.g. 200)" min="10" max="2000">
             <button class="custom-add-btn" onclick="addCustomWater()">Add</button>
         </div>
+
+        <!-- Share Weekly Report Button -->
+        <button class="btn-share" onclick="shareWeeklyReport()">
+            <i class="fa-solid fa-share-nodes"></i> Share Weekly Clinical Report
+        </button>
 
         <!-- Reset Button -->
         <button class="btn-reset" onclick="resetWater()">
             <i class="fa-solid fa-rotate-right"></i> Reset Today's Progress
         </button>
 
-        <!-- Smart Tip Box -->
+        <!-- Smart Dynamic Encouragement Tip Box -->
         <div class="tip-box">
             <i class="fa-solid fa-lightbulb"></i>
             <div>
-                <strong>Clinical Tip:</strong> <span id="tipText">Consistent hydration throughout the day enhances focus and physical vitality!</span>
+                <strong>Clinical Encouragement:</strong> <span id="dynamicTipText">Consistency is your superpower. Every sip brings you closer to ultimate vitality!</span>
             </div>
         </div>
     </div>
@@ -548,32 +588,117 @@
     <script>
         let currentWater = localStorage.getItem('currentWater') ? parseInt(localStorage.getItem('currentWater')) : 0;
         let targetWater = localStorage.getItem('targetWater') ? parseInt(localStorage.getItem('targetWater')) : 2500;
-        let sipsCount = localStorage.getItem('sipsCount') ? parseInt(localStorage.getItem('sipsCount')) : 0;
+        
+        let weeklyCheckIns = JSON.parse(localStorage.getItem('weeklyCheckIns')) || [false, false, false, false, false, false, false];
+        let dailyChecks = JSON.parse(localStorage.getItem('dailyChecks')) || [false, false, false, false];
         
         let lastResetDate = localStorage.getItem('lastResetDate');
         let todayDate = new Date().toLocaleDateString();
-        let alertIntervalTime = localStorage.getItem('alertIntervalTime') ? parseInt(localStorage.getItem('alertIntervalTime')) : 7200000;
-        let reminderTimer = null;
 
-        // Auto reset if new day
         if (lastResetDate !== todayDate) {
             currentWater = 0;
-            sipsCount = 0;
+            dailyChecks = [false, false, false, false]; // Reset daily 4 check-ins for the new day
+            localStorage.setItem('dailyChecks', JSON.stringify(dailyChecks));
             localStorage.setItem('lastResetDate', todayDate);
-            localStorage.setItem('sipsCount', sipsCount);
         }
 
         document.getElementById('customGoalInput').value = targetWater;
+        renderWeeklyCircles();
+        renderDailyCheckpoints();
         updateUI();
+        setRandomEncouragement();
 
         function toggleSettings() {
             const panel = document.getElementById('settingsPanel');
             panel.classList.toggle('active');
         }
 
+        // Render 4 Daily Check-in Sprints
+        function renderDailyCheckpoints() {
+            const container = document.getElementById('dailyCheckGrid');
+            container.innerHTML = '';
+            
+            const labels = ['Morning', 'Midday', 'Afternoon', 'Evening'];
+            let doneCount = 0;
+
+            for (let i = 0; i < 4; i++) {
+                if (dailyChecks[i]) doneCount++;
+
+                let btn = document.createElement('div');
+                btn.className = 'checkpoint-btn';
+                if (dailyChecks[i]) btn.classList.add('completed');
+
+                btn.innerHTML = `<span>${labels[i]}</span><strong>${dailyChecks[i] ? '✓' : (i + 1)}</strong>`;
+                
+                btn.onclick = () => {
+                    dailyChecks[i] = !dailyChecks[i];
+                    localStorage.setItem('dailyChecks', JSON.stringify(dailyChecks));
+                    renderDailyCheckpoints();
+                };
+
+                container.appendChild(btn);
+            }
+
+            document.getElementById('dailyCheckScore').innerText = `${doneCount}/4 Done`;
+        }
+
+        // Render 7 Flexible Weekly Circles
+        function renderWeeklyCircles() {
+            const container = document.getElementById('circlesGridContainer');
+            container.innerHTML = '';
+            
+            let completedCount = 0;
+
+            for (let i = 0; i < 7; i++) {
+                if (weeklyCheckIns[i]) completedCount++;
+
+                let circle = document.createElement('div');
+                circle.className = 'check-circle';
+                if (weeklyCheckIns[i]) circle.classList.add('completed');
+
+                circle.innerHTML = weeklyCheckIns[i] ? '<i class="fa-solid fa-check"></i>' : (i + 1);
+                
+                circle.onclick = () => {
+                    weeklyCheckIns[i] = !weeklyCheckIns[i];
+                    localStorage.setItem('weeklyCheckIns', JSON.stringify(weeklyCheckIns));
+                    renderWeeklyCircles();
+                };
+
+                container.appendChild(circle);
+            }
+
+            document.getElementById('weeklyScoreText').innerText = `${completedCount}/7 Days`;
+        }
+
+        // Dynamic Encouragement Tips Rotation
+        function setRandomEncouragement() {
+            const tips = [
+                "Consistency is your superpower. Every sip brings you closer to ultimate vitality!",
+                "Take a deep breath and have a refreshing sip. You are doing wonderful today!",
+                "Hydration fuels your focus, mood, and daily physical performance. Keep going!",
+                "Small conscious steps create massive clinical results over time. Proud of your focus!"
+            ];
+            const randomTip = tips[Math.floor(Math.random() * tips.length)];
+            document.getElementById('dynamicTipText').innerText = randomTip;
+        }
+
+        function checkAutoCheckIn() {
+            let percentage = (currentWater / targetWater) * 100;
+            if (percentage >= 100) {
+                let firstIncomplete = weeklyCheckIns.indexOf(false);
+                if (firstIncomplete !== -1) {
+                    weeklyCheckIns[firstIncomplete] = true;
+                } else {
+                    weeklyCheckIns[6] = true;
+                }
+                localStorage.setItem('weeklyCheckIns', JSON.stringify(weeklyCheckIns));
+                renderWeeklyCircles();
+            }
+        }
+
         function addWater(amount) {
             currentWater += amount;
-            sipsCount += 1;
+            checkAutoCheckIn();
             saveAndSync();
         }
 
@@ -585,23 +710,25 @@
                 return;
             }
             currentWater += val;
-            sipsCount += 1;
             input.value = '';
+            checkAutoCheckIn();
             saveAndSync();
         }
 
         function resetWater() {
             currentWater = 0;
-            sipsCount = 0;
+            dailyChecks = [false, false, false, false];
+            localStorage.setItem('dailyChecks', JSON.stringify(dailyChecks));
             saveAndSync();
+            renderDailyCheckpoints();
         }
 
         function saveAndSync() {
             localStorage.setItem('currentWater', currentWater);
             localStorage.setItem('targetWater', targetWater);
-            localStorage.setItem('sipsCount', sipsCount);
             localStorage.setItem('lastResetDate', new Date().toLocaleDateString());
             updateUI();
+            renderWeeklyCircles();
         }
 
         function updateUI() {
@@ -617,21 +744,33 @@
             document.getElementById('percentage-text').innerText = percentage + '%';
             document.getElementById('progressBar').style.width = percentage + '%';
 
-            // Advanced Stats Update
-            document.getElementById('totalSipsCount').innerText = sipsCount;
-            let avg = sipsCount > 0 ? Math.round(currentWater / sipsCount) : 0;
-            document.getElementById('avgSipSize').innerText = avg + ' ml';
-
-            let statusEl = document.getElementById('hydrationStatus');
+            const cardEl = document.getElementById('progressCardElement');
             if (percentage >= 100) {
-                statusEl.innerText = "Goal Achieved! 🎉";
-                statusEl.style.color = "var(--success)";
-            } else if (percentage >= 50) {
-                statusEl.innerText = "On Track 👍";
-                statusEl.style.color = "var(--primary)";
+                cardEl.classList.add('celebration-glow');
             } else {
-                statusEl.innerText = "Needs Sip 💧";
-                statusEl.style.color = "#f97316";
+                cardEl.classList.remove('celebration-glow');
+            }
+        }
+
+        function shareWeeklyReport() {
+            let completedDays = weeklyCheckIns.filter(Boolean).length;
+            let dailyDone = dailyChecks.filter(Boolean).length;
+            let reportText = `📊 *Weekly Clinical Hydration Report* 💧\n\n` +
+                             `• Sequence Compliance: *${completedDays} / 7 Days* Completed\n` +
+                             `• Today's Check-ins: *${dailyDone} / 4 Sprints* Done\n` +
+                             `• Today's Water: *${currentWater} ml* / ${targetWater} ml\n` +
+                             `• Status: *${completedDays >= 5 ? 'Excellent Compliance 🌟' : 'Steady Progress 👍'}*\n\n` +
+                             `Verified via Hydration Pro Clinical Tracker.`;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Weekly Hydration Report',
+                    text: reportText,
+                }).catch(() => {});
+            } else {
+                navigator.clipboard.writeText(reportText).then(() => {
+                    alert("📋 Weekly report copied to clipboard! You can paste and send it via WhatsApp.");
+                });
             }
         }
 
@@ -640,46 +779,9 @@
             if (newGoal && newGoal >= 500) {
                 targetWater = newGoal;
             }
-
-            const selectVal = document.getElementById('intervalSelect').value;
-            alertIntervalTime = parseInt(selectVal);
-            localStorage.setItem('alertIntervalTime', alertIntervalTime);
-
-            if (!("Notification" in window)) {
-                alert("Your browser does not support notifications.");
-                return;
-            }
-
-            Notification.requestPermission().then(permission => {
-                if (permission === "granted") {
-                    alert("Settings updated successfully!");
-                    document.getElementById('settingsPanel').classList.remove('active');
-                    setupReminders();
-                    updateUI();
-                } else {
-                    alert("Please enable notification permissions in your browser settings.");
-                }
-            });
-        }
-
-        function setupReminders() {
-            if (reminderTimer) clearInterval(reminderTimer);
-
-            const tips = [
-                "Time for a hydration break! Drink a fresh glass of water.",
-                "Keep your metabolism active, take a sip now!",
-                "Hydration check: Don't let yourself get thirsty."
-            ];
-
-            reminderTimer = setInterval(() => {
-                if (Notification.permission === "granted") {
-                    let randomTip = tips[Math.floor(Math.random() * tips.length)];
-                    new Notification("Hydration Reminder 💧", {
-                        body: randomTip,
-                        icon: document.getElementById('brandLogo').src
-                    });
-                }
-            }, 3000);
+            saveAndSync();
+            document.getElementById('settingsPanel').classList.remove('active');
+            alert("Settings updated successfully!");
         }
     </script>
 </body>
